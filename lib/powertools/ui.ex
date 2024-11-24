@@ -124,11 +124,6 @@ defmodule Powertools.UI do
   defp status_text_icon(:info), do: "✔"
   defp status_text_icon(icon), do: icon
 
-  @spec ready_title :: :ok
-  def ready_title(), do: Title.ready_text()
-  @spec not_ready_title :: :ok
-  def not_ready_title(), do: Title.not_ready_text()
-
   # FOOTER
   #
   @spec footer :: :ok

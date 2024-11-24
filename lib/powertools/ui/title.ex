@@ -1,7 +1,6 @@
 defmodule Powertools.UI.Title do
   @moduledoc false
 
-  alias Powertools.UI
   alias Powertools.UI.Format
 
   def title(name, spacing) do
@@ -43,58 +42,6 @@ defmodule Powertools.UI.Title do
     end
     |> Format.format()
   end
-
-  # def ready_text() do
-  #   [
-  #     "",
-  #     {"Hey, looks like you're", :green},
-  #     "",
-  #     "#{UI.ansi("█▀▄", UI.random_color(:green))} #{UI.ansi("██▀", UI.random_color(:green))} #{UI.ansi("▄▀▄", UI.random_color(:green))} #{UI.ansi("█▀▄", UI.random_color(:green))} #{UI.ansi("▀▄▀", UI.random_color(:green))} #{UI.ansi("█", UI.random_color(:green))}",
-  #     "#{UI.ansi("█▀▄", UI.random_color(:green))} #{UI.ansi("█▄▄", UI.random_color(:green))} #{UI.ansi("█▀█", UI.random_color(:green))} #{UI.ansi("█▄▀", UI.random_color(:green))} #{UI.ansi(" █ ", UI.random_color(:green))} #{UI.ansi("▄", UI.random_color(:green))}",
-  #     "",
-  #     {"You are all setup to start building with condor! To start a new application, try the new command:",
-  #      :green},
-  #     "",
-  #     [
-  #       " ",
-  #       {"$", :light_black},
-  #       {"mix condor.new", :bright},
-  #       {"<PATH>", [:bright, :light_green]}
-  #     ]
-  #   ]
-  #   |> UI.print()
-  # end
-
-  # def not_ready_text() do
-  #   [
-  #     "",
-  #     {"Oops, it looks like you're", :red},
-  #     "",
-  #     "#{UI.ansi("█▄ █", UI.random_color(:red))} #{UI.ansi("▄▀▄", UI.random_color(:red))} #{UI.ansi("▀█▀", UI.random_color(:red))}   #{UI.ansi("█▀▄", UI.random_color(:red))} #{UI.ansi("██▀", UI.random_color(:red))} #{UI.ansi("▄▀▄", UI.random_color(:red))} #{UI.ansi("█▀▄", UI.random_color(:red))} #{UI.ansi("▀▄▀", UI.random_color(:red))} #{UI.ansi(" ", UI.random_color(:red))} #{UI.ansi(" ", UI.random_color(:red))} #{UI.ansi(" ", UI.random_color(:red))}",
-  #     "#{UI.ansi("█ ▀█", UI.random_color(:red))} #{UI.ansi("▀▄▀", UI.random_color(:red))} #{UI.ansi(" █ ", UI.random_color(:red))}   #{UI.ansi("█▀▄", UI.random_color(:red))} #{UI.ansi("█▄▄", UI.random_color(:red))} #{UI.ansi("█▀█", UI.random_color(:red))} #{UI.ansi("█▄▀", UI.random_color(:red))} #{UI.ansi(" █ ", UI.random_color(:red))} #{UI.ansi("▄", UI.random_color(:red))} #{UI.ansi("▄", UI.random_color(:red))} #{UI.ansi("▄", UI.random_color(:red))}",
-  #     "",
-  #     {"(But we'll help you get there)", :red},
-  #     "",
-  #     [
-  #       {"Don't worry,", :red},
-  #       {"there's good news!", [:light_red, :bright]},
-  #       {"The setup command is our", :red},
-  #       {"EASY", [:red_background, :light_white, :bright]},
-  #       {"button. It will", :red}
-  #     ],
-  #     {"install and configure all dependencies automatically. Check it out!", :red},
-  #     "",
-  #     [
-  #       " ",
-  #       {"$", :light_black},
-  #       {"mix condor.setup", :bright}
-  #     ],
-  #     "",
-  #     {"Know what you're doing already? The missing dependencies and their versions are listed below. They can be manually installed and then checked again by rerunning this command.",
-  #      :red}
-  #   ]
-  #   |> UI.print()
-  # end
 
   defp title_letter(letter) when is_binary(letter) do
     %{
